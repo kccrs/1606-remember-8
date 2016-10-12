@@ -1,0 +1,13 @@
+<div class="reminders template">
+  <p>This is <em>reminders.hbs</em>.</p>
+
+
+  <ul>
+  {{#each model as |reminder|}}
+    <li class="spec-reminder-item">Reminder: {{reminder.title}}</li>
+    <!-- <li>{{#link-to 'reminders.reminder' reminder}}{{reminder.name}}{{/link-to}}</li> -->
+  {{/each}}
+  </ul>
+
+  {{outlet}}
+</div>
