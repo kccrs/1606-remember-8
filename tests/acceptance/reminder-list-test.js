@@ -52,12 +52,3 @@ test('adding a new reminder', function(assert) {
     assert.equal(Ember.$('.spec-reminder-item').length, 6);
   });
 });
-
-// test('should add a grocery on submit with valid input', function(assert) {
-//   visit('/');
-//
-//   andThen(function() {
-//     assert.equal(currentURL(), '/');
-//     assert.equal(find('.grocery-item').length, 1, 'should show 1 grocery')
-//   });
-// });
