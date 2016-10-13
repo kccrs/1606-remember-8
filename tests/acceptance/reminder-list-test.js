@@ -33,3 +33,5 @@ test('clicking on an individual item', function(assert) {
     assert.equal(Ember.$('.spec-reminder-title-link:first').text().trim(), Ember.$('.spec-reminder-title-individual').text().trim());
   });
 });
+
+test('')
