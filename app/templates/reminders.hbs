@@ -10,5 +10,8 @@
       </article>
     {{/each}}
   </section>
+  {{#link-to 'reminders.new' class="spec-add-new-reminder"}}
+    <button class="add-new-reminder">Add new reminder</button>
+  {{/link-to}}
   {{outlet}}
 </div>

@@ -34,4 +34,30 @@ test('clicking on an individual item', function(assert) {
   });
 });
 
-test('')
+test('adding a new reminder', function(assert) {
+  visit('/');
+
+  click('.add-new-reminder');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/new');
+  });
+
+  fillIn('.spec-input-title', 'Buy beer');
+  fillIn('.spec-input-date', '10/13/16');
+  fillIn('.spec-input-notes', 'Nothing too hoppy.');
+  click('.submit-button');
+
+  andThen(function() {
+    assert.equal(Ember.$('.spec-reminder-item').length, 6);
+  });
+});
+
+// test('should add a grocery on submit with valid input', function(assert) {
+//   visit('/');
+//
+//   andThen(function() {
+//     assert.equal(currentURL(), '/');
+//     assert.equal(find('.grocery-item').length, 1, 'should show 1 grocery')
+//   });
+// });
