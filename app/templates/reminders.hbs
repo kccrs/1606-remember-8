@@ -1,0 +1,10 @@
+<div class="reminders template">
+  <section>
+    {{#each model as |reminder|}}
+      <article class="spec-reminder-item">
+        Reminder: {{reminder.title}}
+      </article>
+    {{/each}}
+  </section>
+  {{outlet}}
+</div>
