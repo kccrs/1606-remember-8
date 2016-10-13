@@ -1,0 +1,15 @@
+<div class="reminder template">
+  <section>
+    <article>
+      {{#with model as |reminder|}}
+      <h4 class="spec-reminder-title-individual">
+        {{reminder.title}}
+      </h4>
+      <p>
+        {{reminder.date}}
+      </p>
+      {{/with}}
+    </article>
+  </section>
+  {{outlet}}
+</div>
