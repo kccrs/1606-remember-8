@@ -42,6 +42,7 @@ test('adding a new reminder', function(assert) {
   andThen(function() {
     assert.equal(currentURL(), '/new');
   });
+  
 
   fillIn('.spec-input-title', 'Buy beer');
   fillIn('.spec-input-date', '10/13/16');

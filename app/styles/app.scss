@@ -7,3 +7,8 @@
   color: orange;
   font-size: 24px;
 }
+
+button.active {
+  opacity: 0.5;
+  pointer-events: none;
+}
