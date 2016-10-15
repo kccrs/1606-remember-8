@@ -3,15 +3,15 @@
 <form class="add-reminder-form" {{action 'addReminder' on="submit"}}>
   <label>
     Title
-    {{input class="spec-input-title" value=title}}
+    {{input class="input-title" value=title}}
   </label>
   <label>
     Date
-    {{input type="date" class="spec-input-date" value=date}}
+    {{input type="date" class="input-date" value=date}}
   </label>
   <label>
     Notes
-    {{textarea class="spec-input-notes" value=notes}}
+    {{textarea class="input-notes" value=notes}}
   </label>
   <button class="submit-button">Submit</button>
 </form>
