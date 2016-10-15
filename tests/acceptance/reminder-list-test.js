@@ -52,3 +52,39 @@ test('adding a new reminder', function(assert) {
     assert.equal(Ember.$('.reminder-title-link:last').text().trim(), 'Buy beer');
   });
 });
+
+test('editing a reminder', function(assert) {
+  visit('/');
+
+  //user clicks on first title
+  click('.reminder-title-link:first');
+
+  //user clicks on edit button
+  click('.edit-button');
+
+  //edit button navigates to edit page
+  andThen(function() {
+    assert.equal(currentURL(), '/1/edit');
+  });
+
+  //title becomes editable - user changes title
+  fillIn('.edit-title', 'Buy cheese');
+
+  //date becomes editable - user changes date
+  fillIn('.edit-date', '2016-10-15');
+
+  //notes become editable - user changes notes
+  fillIn('.edit-notes', 'Maybe a nice Havarti.');
+
+  //user clicks save button
+  click('.save-button');
+
+  //save button navigates back to reminder page
+  //verify title changed
+
+  andThen(function() {
+    assert.equal(currentURL(), '/1');
+    assert.equal(Ember.$('.reminder-title-link:first').text().trim(), 'Buy cheese');
+  });
+
+});

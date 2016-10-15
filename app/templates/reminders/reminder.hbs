@@ -2,13 +2,19 @@
   <section>
     <article>
       {{#with model as |reminder|}}
-      <h4 class="reminder-title-individual">
-        {{reminder.title}}
-      </h4>
-      <p>
-        {{reminder.date}}
-      </p>
+        <h4 class="reminder-title-individual">
+          {{reminder.title}}
+        </h4>
+        <p>
+          {{reminder.date}}
+        </p>
+        <p>
+          {{reminder.notes}}
+        </p>
       {{/with}}
+      {{#link-to 'reminders.reminder.edit' class="edit-button" tagName="button"}}
+        Edit
+      {{/link-to}}
     </article>
   </section>
   {{outlet}}
