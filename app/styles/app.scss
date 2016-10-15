@@ -8,7 +8,8 @@
   font-size: 24px;
 }
 
-button.active {
+.add-new-reminder.active,
+.edit-button.active {
   background-color: gray;
   opacity: 0.5;
   pointer-events: none;
