@@ -1,16 +1,65 @@
+@import '_reset';
+@import '_variables';
+
+/* WHOLE PAGE STYLES */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-background-main;
+  font-family: $font-main;
+}
+
+header {
+  background-color: $color-background-accent;
+  height: 10vh;
+  border-bottom: 2px solid darken($color-background-accent, 10);
+  h1 {
+    font-size: 30px;
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+
+.reminders-container {
+  position: relative;
+  width: 30%;
+  height: 90vh;
+  background-color: white;
+}
+
 .reminder-title-link {
-  color: blue;
+  color: $color-text-main;
   text-decoration: none;
 }
 
 .reminder-title .active {
-  color: orange;
+  color: $color-text-secondary;
   font-size: 24px;
+}
+
+.add-new-reminder {
+  color: $color-text-main;
+  font-size: 36px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
 }
 
 .add-new-reminder.active,
 .edit-button.active {
-  background-color: gray;
   opacity: 0.5;
   pointer-events: none;
+}
+
+.reminder-item {
+  border: 2px solid $color-text-main;
+  border-top: none;
+  height: 60px;
 }
