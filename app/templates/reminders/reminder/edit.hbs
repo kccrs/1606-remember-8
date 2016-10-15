@@ -1,20 +1,22 @@
 <h2>Edit Reminder</h2>
 
 <form class="edit-reminder-form" {{action 'editReminder' on="submit"}}>
-  <label>
-    Title
-    {{input class="edit-title" value=title}}
-  </label>
-  <label>
-    Date
-    {{input type="date" class="edit-date" value=date}}
-  </label>
-  <label>
-    Notes
-    {{textarea class="edit-notes" value=notes}}
-  </label>
-  {{#link-to 'reminders.reminder' reminder.id class="save-button" tagName="button"}}
-    Save
-  {{/link-to}}
+  {{#with model as |reminder|}}
+    <label>
+      Title
+      {{input class="edit-title" value=reminder.title}}
+    </label>
+    <label>
+      Date
+      {{input type="date" class="edit-date" value=reminder.date}}
+    </label>
+    <label>
+      Notes
+      {{textarea class="edit-notes" value=reminder.notes}}
+    </label>
+    {{#link-to 'reminders.reminder' reminder.id class="save-button" tagName="button"}}
+      Save
+    {{/link-to}}
+  {{/with}}
 </form>
 <!-- {{outlet}} -->
