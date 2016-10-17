@@ -21,6 +21,13 @@ html {
   color: $color-text-secondary;
 }
 
+.add-new-reminder,
+.edit-button,
+.save-button {
+  background-color: $color-text-main;
+  cursor: pointer;
+}
+
 header {
   background-color: $color-background-accent;
   border-bottom: 2px solid darken($color-background-accent, 10);
@@ -69,7 +76,6 @@ header {
 }
 
 .add-new-reminder {
-  background-color: $color-text-main;
   bottom: 0;
   color: $color-background-accent;
   font-size: 40px;
@@ -77,9 +83,6 @@ header {
   padding-bottom: 10px;
   position: absolute;
   width: 100%;
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .add-new-reminder.active,
@@ -91,7 +94,7 @@ header {
 .reminder-item {
   border: 2px solid $color-text-main;
   border-top: none;
-  height: 80px;
+  height: 90px;
 }
 
 .reminder-title-individual,
@@ -110,15 +113,20 @@ header {
 
 .reminder-notes-individual {
   font-size: 20px;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 
-.edit-button {
-  background-color: $color-text-main;
+.edit-button,
+.save-button {
   border-radius: 5px;
   color: $color-background-accent;
-  font-size: 14px;
-  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  height: 40px;
   margin: 30px 0 0 30px;
-  width: 100px;
+  width: 120px;
+}
+
+.edit-reminder-form {
+  margin: 30px;
 }
