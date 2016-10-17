@@ -10,10 +10,21 @@ html {
   box-sizing: inherit;
 }
 
+.list-dates,
+.reminder-date-individual,
+.reminder-notes-individual {
+  font-family: $font-secondary;
+}
+
+.reminder-title-individual,
+.reminder-title .active {
+  color: $color-text-secondary;
+}
+
 header {
   background-color: $color-background-accent;
-  height: 10vh;
   border-bottom: 2px solid darken($color-background-accent, 10);
+  height: 10vh;
   h1 {
     font-size: 30px;
     padding-top: 20px;
@@ -28,14 +39,13 @@ header {
 .reminders-container {
   background-color: $color-background-main;
   height: 90vh;
-  width: 30%;
   position: relative;
-  // background-color: white;
+  width: 30%;
 }
 
 .reminder-area {
-  width: 65%;
   float: right;
+  width: 65%;
 }
 
 .reminder-title-link,
@@ -47,28 +57,25 @@ header {
 .reminder-title {
   font-size: 22px;
   padding: 10px;
-
 }
 
 .reminder-title .active {
-  color: $color-text-secondary;
   font-size: 24px;
 }
 
 .list-dates {
-  color: $color-text-main;
   font-size: 14px;
   padding-left: 10px;
 }
 
 .add-new-reminder {
   background-color: $color-text-main;
+  bottom: 0;
   color: $color-background-accent;
   font-size: 40px;
+  height: 80px;
   padding-bottom: 10px;
   position: absolute;
-  bottom: 0;
-  height: 80px;
   width: 100%;
   &:hover {
     cursor: pointer;
@@ -94,7 +101,6 @@ header {
 }
 
 .reminder-title-individual {
-  color: $color-text-secondary;
   font-size: 36px;
 }
 
@@ -109,10 +115,10 @@ header {
 
 .edit-button {
   background-color: $color-text-main;
+  border-radius: 5px;
   color: $color-background-accent;
   font-size: 14px;
-  border-radius: 5px;
+  height: 30px;
   margin: 30px 0 0 30px;
   width: 100px;
-  height: 30px;
 }

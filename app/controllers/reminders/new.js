@@ -2,14 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  // format: "YYYYMMDD",
-  //  date: null,
-  //  formattedDate: function() {
-  //    var date = this.get('date'),
-  //        format = this.get('format');
-  //    return moment(date).format(format);
-  //  }.property('date', 'format')
-
   actions: {
     addReminder() {
 
@@ -21,14 +13,3 @@ export default Ember.Controller.extend({
     }
   }
 });
-
-
-// App.ApplicationController = Ember.Controller.extend({
-//   format: "YYYYMMDD",
-//   date: null,
-//   formattedDate: function() {
-//     var date = this.get('date'),
-//         format = this.get('format');
-//     return moment(date).format(format);
-//   }.property('date', 'format')
-// });
