@@ -1,17 +1,22 @@
-<div class="reminders template">
-  <section>
+<div class="main-content">
+  <section class="reminders-container">
     {{#each model as |reminder|}}
       <article class="reminder-item">
-        <h4 class="reminder-title">
+        <h2 class="reminder-title">
           {{#link-to 'reminders.reminder' reminder.id class="reminder-title-link"}}
             {{reminder.title}}
           {{/link-to}}
-        </h4>
+        </h2>
+        <p class="list-dates">
+          {{reminder.date}}
+        </p>  
       </article>
     {{/each}}
+    {{#link-to 'reminders.new' class="add-new-reminder" tagName="button"}}
+    +
+    {{/link-to}}
   </section>
-  {{#link-to 'reminders.new' class="add-new-reminder" tagName="button"}}
-    Add new reminder
-  {{/link-to}}
-  {{outlet}}
+  <section class="reminder-area">
+    {{outlet}}
+  </section>
 </div>

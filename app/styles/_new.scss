@@ -1,0 +1,44 @@
+.new-container {
+  background-color: $color-background-main;
+  border: 2px solid $color-text-main;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.new-container,
+.input {
+  border-radius: 4px;
+}
+
+.new-title-tag {
+  color: $color-text-secondary;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.add-reminder-form {
+  margin: 20px;
+  label {
+    color: $color-text-main;
+    text-shadow: 0 .7px 0 $color-background-accent;
+    font-size: 24px;
+  }
+}
+
+.input {
+  border: 1px solid $color-text-main;
+  font-size: 18px;
+  height: 40px;
+  margin: 10px 0;
+  padding-left: 10px;
+  width: 90%;
+}
+
+.input-notes {
+  height: 100px;
+}

@@ -1,0 +1,40 @@
+button {
+  background-color: $color-text-main;
+  cursor: pointer;
+}
+
+.edit-button,
+.save-button,
+.submit-button {
+  border-radius: 5px;
+  color: $color-background-accent;
+  font-size: 18px;
+  font-weight: bold;
+  height: 40px;
+  margin: 10px 0 0 30px;
+  width: 120px;
+}
+
+.submit-button {
+  margin: 10px;
+}
+
+.add-new-reminder {
+  bottom: 0;
+  color: $color-background-accent;
+  font-size: 40px;
+  height: 80px;
+  padding-bottom: 10px;
+  position: absolute;
+  width: 100%;
+}
+
+.add-new-reminder.active,
+.edit-button.active {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.save-button {
+  margin-top: 0;
+}
