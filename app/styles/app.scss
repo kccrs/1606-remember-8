@@ -1,9 +1,13 @@
 @import '_reset';
 @import '_variables';
+@import '_new';
+@import '_edit';
+@import '_buttons';
 
 /* WHOLE PAGE STYLES */
 html {
   box-sizing: border-box;
+  color: $color-text-main;
   font-family: $font-main;
 }
 *, *:before, *:after {
@@ -19,13 +23,6 @@ html {
 .reminder-title-individual,
 .reminder-title .active {
   color: $color-text-secondary;
-}
-
-.add-new-reminder,
-.edit-button,
-.save-button {
-  background-color: $color-text-main;
-  cursor: pointer;
 }
 
 header {
@@ -66,29 +63,9 @@ header {
   padding: 10px;
 }
 
-.reminder-title .active {
-  font-size: 24px;
-}
-
 .list-dates {
   font-size: 14px;
   padding-left: 10px;
-}
-
-.add-new-reminder {
-  bottom: 0;
-  color: $color-background-accent;
-  font-size: 40px;
-  height: 80px;
-  padding-bottom: 10px;
-  position: absolute;
-  width: 100%;
-}
-
-.add-new-reminder.active,
-.edit-button.active {
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 .reminder-item {
@@ -100,11 +77,11 @@ header {
 .reminder-title-individual,
 .reminder-date-individual,
 .reminder-notes-individual {
-  padding: 30px 0 0 30px;
+  padding: 20px 0 0 30px;
 }
 
 .reminder-title-individual {
-  font-size: 36px;
+  font-size: 34px;
 }
 
 .reminder-date-individual {
@@ -114,19 +91,4 @@ header {
 .reminder-notes-individual {
   font-size: 20px;
   line-height: 1.5em;
-}
-
-.edit-button,
-.save-button {
-  border-radius: 5px;
-  color: $color-background-accent;
-  font-size: 18px;
-  font-weight: bold;
-  height: 40px;
-  margin: 30px 0 0 30px;
-  width: 120px;
-}
-
-.edit-reminder-form {
-  margin: 30px;
 }

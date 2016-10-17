@@ -1,0 +1,41 @@
+.edit-container {
+  background-color: $color-background-main;
+  border: 2px solid $color-text-main;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 95%;
+  margin: 30px;
+}
+
+.edit-reminder-form {
+  margin: 20px;
+  label {
+    color: $color-text-main;
+    text-shadow: 0 .7px 0 $color-background-accent;
+    font-size: 24px;
+  }
+}
+
+.edit-container,
+.input {
+  border-radius: 4px;
+}
+
+.add-reminder-form {
+  margin: 20px;
+
+}
+
+.input {
+  border: 1px solid $color-text-main;
+  font-size: 18px;
+  height: 40px;
+  margin: 10px 0;
+  padding-left: 10px;
+  width: 90%;
+}
+
+.input-notes {
+  height: 100px;
+}
