@@ -11,7 +11,7 @@ button {
   font-size: 18px;
   font-weight: bold;
   height: 40px;
-  margin: 30px 0 0 30px;
+  margin: 10px 0 0 30px;
   width: 120px;
 }
 
@@ -33,4 +33,8 @@ button {
 .edit-button.active {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.save-button {
+  margin-top: 0;
 }

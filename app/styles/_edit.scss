@@ -1,41 +1,38 @@
 .edit-container {
   background-color: $color-background-main;
   border: 2px solid $color-text-main;
-  display: flex;
-  flex-direction: column;
-  height: 500px;
+  border-radius: 4px;
+  height: 320px;
   width: 95%;
-  margin: 30px;
+  margin: 20px 0 0 30px;
 }
 
 .edit-reminder-form {
   margin: 20px;
-  label {
-    color: $color-text-main;
-    text-shadow: 0 .7px 0 $color-background-accent;
-    font-size: 24px;
-  }
 }
 
-.edit-container,
-.input {
-  border-radius: 4px;
+label {
+  color: $color-text-main;
+  display: block;
+  text-shadow: 0 .7px 0 $color-background-accent;
+  font-size: 20px;
 }
 
 .add-reminder-form {
   margin: 20px;
-
 }
 
 .input {
-  border: 1px solid $color-text-main;
-  font-size: 18px;
-  height: 40px;
-  margin: 10px 0;
-  padding-left: 10px;
+  display: block;
+  margin-left: 5px;
   width: 90%;
 }
 
-.input-notes {
-  height: 100px;
+.edit-title,
+.edit-date {
+  height: 30px;
+}
+
+.edit-notes {
+  height: 70px;
 }
