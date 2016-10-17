@@ -19,17 +19,36 @@ test('viewing the homepage', function(assert) {
 
   andThen(function() {
     assert.equal(currentURL(), '/');
-    assert.equal(Ember.$('.spec-reminder-item').length, 5);
+    assert.equal(Ember.$('.reminder-item').length, 5);
   });
 });
 
 test('clicking on an individual item', function(assert) {
   visit('/');
 
-  click('.spec-reminder-title-link:first');
+  click('.reminder-title-link:first');
 
   andThen(function() {
     assert.equal(currentURL(), '/1');
-    assert.equal(Ember.$('.spec-reminder-title-link:first').text().trim(), Ember.$('.spec-reminder-title-individual').text().trim());
+    assert.equal(Ember.$('.reminder-title-link:first').text().trim(), Ember.$('.reminder-title-individual').text().trim());
+  });
+});
+
+test('adding a new reminder', function(assert) {
+  visit('/');
+
+  click('.add-new-reminder');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/new');
+  });
+
+  fillIn('.input-title', 'Buy beer');
+  fillIn('.input-date', '2016-10-13');
+  fillIn('.input-notes', 'Nothing too hoppy.');
+  click('.submit-button');
+
+  andThen(function() {
+    assert.equal(Ember.$('.reminder-title-link:last').text().trim(), 'Buy beer');
   });
 });

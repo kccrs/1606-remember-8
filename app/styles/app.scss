@@ -1,4 +1,4 @@
-.spec-reminder-title-link {
+.reminder-title-link {
   color: blue;
   text-decoration: none;
 }
@@ -6,4 +6,9 @@
 .active {
   color: orange;
   font-size: 24px;
+}
+
+button.active {
+  opacity: 0.5;
+  pointer-events: none;
 }
