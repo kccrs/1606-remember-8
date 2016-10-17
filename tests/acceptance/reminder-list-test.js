@@ -52,3 +52,25 @@ test('adding a new reminder', function(assert) {
     assert.equal(Ember.$('.reminder-title-link:last').text().trim(), 'Buy beer');
   });
 });
+
+test('editing a reminder', function(assert) {
+  visit('/');
+
+  click('.reminder-title-link:first');
+  click('.edit-button');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/1/edit');
+  });
+
+  fillIn('.edit-title', 'Buy cheese');
+  fillIn('.edit-date', '2016-10-15');
+  fillIn('.edit-notes', 'Maybe a nice Havarti.');
+
+  click('.save-button');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/1');
+    assert.equal(Ember.$('.reminder-title-link:first').text().trim(), 'Buy cheese');
+  });
+});
