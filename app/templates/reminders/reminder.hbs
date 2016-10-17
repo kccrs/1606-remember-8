@@ -1,16 +1,19 @@
-<section class="single-reminder">
-  {{#with model as |reminder|}}
-    <h2 class="reminder-title-individual">
-      {{reminder.title}}
-    </h2>
-    <h3 class="reminder-date-individual">
-      {{reminder.date}}
-    </h3>
-    <p class="reminder-notes-individual">
-      {{reminder.notes}}
-    </p>
-  {{/with}}
-  {{#link-to 'reminders.reminder.edit' class="edit-button" tagName="button"}}
-    Edit
-  {{/link-to}}
-</section>
+<div class="reminder template">
+  <section class="single-reminder">
+    {{#with model as |reminder|}}
+      <h2 class="reminder-title-individual">
+        {{reminder.title}}
+      </h2>
+      <h3 class="reminder-date-individual">
+        {{reminder.date}}
+      </h3>
+      <p class="reminder-notes-individual">
+        {{reminder.notes}}
+      </p>
+    {{/with}}
+    {{#link-to 'reminders.reminder.edit' class="edit-button" tagName="button"}}
+      Edit
+    {{/link-to}}
+  </section>
+  {{outlet}}
+</div>
