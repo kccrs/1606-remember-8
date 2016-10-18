@@ -3,7 +3,6 @@
   <form class="add-reminder-form" {{action 'saveReminder' model on="submit"}}>
     <label>
       Title:
-      title: {{model.title}}
       {{input class="input input-title" value=model.title}}
     </label>
     <label>

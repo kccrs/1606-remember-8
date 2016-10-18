@@ -8,7 +8,6 @@ export default Ember.Route.extend({
     saveReminder(model) {
       model.save().then( () => {
         this.transitionTo('reminders');
-        console.log('The model was saved');
       });
     }
   }

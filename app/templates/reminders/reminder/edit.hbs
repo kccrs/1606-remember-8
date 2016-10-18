@@ -1,5 +1,5 @@
 <section class="edit-container">
-  <form class="edit-reminder-form" {{action 'editReminder' on="submit"}}>
+  <form class="edit-reminder-form" {{action "editReminder" on="submit"}}>
     {{#with model as |reminder|}}
       <label>
         Title:
@@ -13,10 +13,10 @@
         Notes:
         {{textarea class="input edit-notes" value=reminder.notes}}
       </label>
-      {{#link-to 'reminders.reminder' reminder.id class="save-button" tagName="button"}}
+      {{#link-to "reminders.reminder" reminder.id class="save-button" tagName="button"}}
         Save
       {{/link-to}}
-      <button class="revert-button">Revert</button>
+      <button class="revert-button" {{action "revertReminder" reminder.id on="click"}}>Revert</button>
     {{/with}}
   </form>
 </section>
