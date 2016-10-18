@@ -46,6 +46,7 @@ test('adding a new reminder', function(assert) {
   fillIn('.input-title', 'Buy beer');
   fillIn('.input-date', '2016-10-13');
   fillIn('.input-notes', 'Nothing too hoppy.');
+  
   click('.submit-button');
 
   andThen(function() {
@@ -76,23 +77,20 @@ test('editing a reminder', function(assert) {
 });
 
 test('reverting an edited reminder to its original state', function(assert) {
-  // go to home page
   visit('/');
-  // click the first reminder and then click edit
   click('.reminder-title-link:first');
   click('.edit-button');
-  // assert we are on the correct URL
+
   andThen(function() {
     assert.equal(currentURL(), '/1/edit');
   });
-  // begin editing fields
+
   fillIn('.edit-title', 'Take a nap');
   fillIn('.edit-date', '2016-10-19');
   fillIn('.edit-notes', 'Just a short nap before more coding.');
 
-  // click revert button
   click('.revert-button');
-  // assert fields are set back to their original state
+
   andThen(function() {
     assert.equal(Ember.$('.reminder-title-link:first').text().trim(), Ember.$('.reminder-title-individual').text().trim());
   });
