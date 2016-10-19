@@ -6,8 +6,8 @@ export default Ember.Route.extend({
       reminder.save();
     },
 
-    revertReminder(id) {
-    this.get('store').findRecord('reminder', id).then((reminder) => {
+    revertReminder(reminder) {
+    this.get('store').findRecord('reminder', reminder).then((reminder) => {
       reminder.rollbackAttributes();
     });
     }

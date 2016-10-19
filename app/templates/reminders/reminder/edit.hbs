@@ -13,7 +13,7 @@
         Notes:
         {{textarea class="input edit-notes" value=reminder.notes}}
       </label>
-      {{#link-to "reminders.reminder" reminder.id class="save-button" tagName="button"}}
+      {{#link-to "reminders.reminder" reminder class="save-button" tagName="button"}}
         Save
       {{/link-to}}
       <button class="revert-button" {{action "revertReminder" reminder.id on="click"}}>Revert</button>
